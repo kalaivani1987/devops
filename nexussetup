@@ -1,0 +1,33 @@
+wget http://download.sonatype.com/nexus/3/nexus-3.22.0-02-unix.tar.gz
+ sudo tar -xvf nexus-3.22.0-02-unix.tar.gz
+   12  ls -lrt
+   13  mv nexus-3.22.0-02 nexus
+   14  cd nexus/
+   15  ls -rlt
+   16  cd ..
+   17  ls -lrt
+   18  sudo adduser nexus
+   19  ls -lrt
+   20  mv nexus sonatype-work /opt
+   21  sudo mv nexus sonatype-work /opt/
+   22  cd /opt/
+   23  ls -rlt
+   24  sudo chown -R nexus:nexus /opt/nexus
+   25  sudo chown -R nexus:nexus /opt/sonatype-work
+   26  ls -lrt
+   27  sudo vim /opt/nexus/bin/nexus.rc
+   28  sudo vim /opt/nexus/bin/nexus.vmoptions
+   29  sudo vim /etc/systemd/system/nexus.service
+   
+   46  sudo apt-get install openjdk-8-jdk
+   47  javac
+   48  java -version
+   49  sudo systemctl start nexus
+   50  sudo systemctl status nexus
+   51  ps -ef|grep nexus
+   52  netstat -tunlp
+   53  sudo apt install net-tools
+   54  netstat -tunlp
+   55  cat /opt/sonatype-work/nexus3/admin.password
+
+
